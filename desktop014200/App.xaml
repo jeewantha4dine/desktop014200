@@ -1,0 +1,65 @@
+﻿<Application x:Class="desktop014200.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:desktop014200"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="navbutton" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0 0 0 0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="100"/>
+
+
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderThickness="2" 
+                                BorderBrush="Black" Padding="15" 
+                                CornerRadius="20">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Wheat"/>
+                    <Setter Property="Foreground" Value="Orange"/>
+
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="Aqua"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+
+        <Style x:Key="Titletext" TargetType="TextBlock" >
+            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White" />
+
+        </Style>
+        <Style x:Key="ListView" TargetType="TextBlock" >
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Width" Value="70"/>
+
+        </Style>
+         
+    </Application.Resources>
+</Application>
